@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <title>Mini Warehouse Management Panel</title>
+</head>
+<body class="bg-light">
+    <header class="container-fluid bg-dark p-4 mb-4">
+        <div class="row align-items-center">
+            <div class="col-6">
+                <div class="text-light d-flex align-items-center">
+                    <i class="bi bi-box-seam fs-4 me-2"></i>
+                    <h4 class="mb-0">Warehouse Management</h4>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="d-flex justify-content-end">
+                    <div class="position-relative d-flex align-items-center">
+                        <div class="me-4">
+                            <i class="bi bi-bell fs-5 text-light"></i>
+                            <span class="badge bg-danger rounded-circle position-absolute translate-middle">3</span>
+                        </div>
+                        <img src="img/headerImg.jpg" alt="Header Image" class="img-fluid rounded-circle border border-2 border-light">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mb-5 container">
+        <section class="mb-4">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#" class="text-decoration-none">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#" class="text-decoration-none">Warehouse</a>
+                </li>
+                <li class="breadcrumb-item active">
+                    <a href="#" class="text-decoration-none text-secondary">Current Stocks</a>
+                </li>
+            </ul>
+        </section>
+        <section class="mb-4">
+            <div class="alert alert-danger d-flex align-items-center">
+                <i class="bi bi-exclamation-triangle-fill me-2 fs-4"></i>
+                <p class="mb-0"><strong>Critical Warning:</strong> 2 products' stock level has fallen below the minimum limit. Please start the procurement process.</p>
+            </div>
+        </section>
+        <section class="mb-4">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="border border-4 border-primary rounded-2 p-3 h-100">
+                        <h4 class="fs-5 opacity-75">Total Product Types</h4>
+                        <span class="fw-bold fs-3">1,248</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="border border-4 border-success p-3 rounded-2 h-100">
+                        <h4 class="fs-5 opacity-75">Warehouse Occupancy Rate</h4>
+                        <span class="fw-bold fs-3">75%</span>
+                        <div class="progress mt-2" style="height: 10px;">
+                            <div class="progress-bar w-75 bg-success" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="border border-4 border-danger rounded-2 p-3 h-100">
+                        <h4 class="fs-5 opacity-75">Critical Stock</h4>
+                        <span class="fw-bold fs-3 text-danger">2 Items</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="border shadow-sm bg-white p-3 text-center rounded-2 d-flex flex-column justify-content-center align-items-center h-100">
+                        <button type="button" class="btn btn-outline-secondary px-5 opacity-75">
+                            <span class="spinner-border spinner-border-sm me-2"></span>
+                            Syncing Server...
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white p-3 border shadow-sm">
+            <h3 class="pb-2 border-bottom fs-4">Current Product List</h3>
+            <div class="table-responsive pt-2">
+                <table class="table text-center align-middle table-hover table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Image</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Stock Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="img/smartphone.jpg" alt="Smartphone" class="rounded-circle border border-2 border-dark">
+                            </td>
+                            <td class="fw-bold">Smartphone X12</td>
+                            <td>Electronics</td>
+                            <td>
+                                <span class="badge bg-success text-white">In Stock (145)</span>
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-sm btn-primary">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-danger">
+                                        <i class="bi bi-trash3"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="img/bluetoothHeadphonesPro.jpg" alt="Bluetooth Headphones Pro" class="rounded-circle border border-2 border-dark">
+                            </td>
+                            <td class="fw-bold">Bluetooth Headphones Pro</td>
+                            <td>Accessories</td>
+                            <td>
+                                <span class="badge bg-warning text-dark">Low Stock (12)</span>
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-sm btn-primary">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-danger">
+                                        <i class="bi bi-trash3"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-danger">
+                            <td>
+                                <img src="img/mechanicalKeyboardV2.jpg" alt="Mechanical Keyboard V2" class="rounded-circle border border-2 border-dark">
+                            </td>
+                            <td class="fw-bold">Mechanical Keyboard V2</td>
+                            <td>Computer</td>
+                            <td>
+                                <span class="badge bg-danger text-white">Out of Stock (0)</span>
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-sm btn-primary">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-danger">
+                                        <i class="bi bi-trash3"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <nav class="d-flex justify-content-center py-3">
+                <ul class="pagination mb-0">
+                    <li class="page-item disabled">
+                        <a href="#" class="page-link">Previous</a>
+                    </li>
+                    <li class="page-item active">
+                        <a href="#" class="page-link">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+
+    <footer class="container-fluid bg-dark py-4 px-3 d-flex flex-column align-items-center text-white text-center">
+        <span class="opacity-75 fw-light">&copy; 2026 Mini Warehouse Management Systems.</span>
+        <span class="small my-2 opacity-50">All rights reserved. For authorized personnel only.</span>
+        <div>
+            <a href="#" class="text-decoration-none text-white">
+                <i class="bi bi-github fs-5"></i>
+            </a>
+            <a href="#" class="text-decoration-none text-white mx-2">
+                <i class="bi bi-linkedin fs-5"></i>
+            </a>
+            <a href="#" class="text-decoration-none text-white">
+                <i class="bi bi-envelope-fill fs-5"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
